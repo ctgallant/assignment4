@@ -1,13 +1,12 @@
 <?php
     $dsn = 'mysql:host=localhost;dbname=todolist';
-    $username = 'root';
+    $username = 'fhsu_user';
     //$password = 'pa55word';
 
     try {
         $db = new PDO($dsn, $username);
         //$db = new PDO($dsn, $username, $password);
     } catch (PDOException $e) {
-        $error_message = "Database Error: ";
         $error_message .= $e->getMessage();
         include('error.php');
         exit();
